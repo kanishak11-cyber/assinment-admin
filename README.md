@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Admin Dashboard
 
-## Getting Started
+## Description
 
-First, run the development server:
+This project involves building an admin interface for viewing and deleting users. The user data is provided via an API. The UI should have the following features:
+
+1. **Column Titles Standout:** Column titles should stand out from the entries.
+2. **Search Bar:** Include a search bar that can filter on any property.
+3. **Edit and Delete Rows:** Ability to edit or delete rows in place (in-memory only).
+4. **Pagination:** Implement pagination with each page containing 10 rows. Pagination should update based on search/filtering.
+5. **Row Selection:** Ability to select one or more rows. Selected rows should have a grayish background. Multiple selected rows can be deleted at once.
+6. **Select/Deselect All:** Checkbox on the top left for selecting or deselecting all displayed rows on the current page.
+7. **Search Box Placeholder:** Search box placeholder text should start with "Search."
+8. **Search Icon/Button:** Search icon/button with class `search-icon` or trigger search on ENTER.
+9. **Action Elements:** Action elements (edit, delete, save) must be buttons with specific class names.
+10. **Navigation Elements:** Navigation elements (first page, previous page, next page, last page) should be buttons or divs with specific class names.
+11. **Inline Editing:** Clicking the edit action in a row should make it editable in the row itself.
+12. **Libraries:** Feel free to use any libraries.
+13. **Deployment:** The application should run successfully when deployed on Vercel, Netlify, or a similar platform.
+14. **Submission:** After deployment, submit [here](https://forms.gle/XAhSahQMFBayF6gq7).
+
+**Note**: Users are sorted by the `id` field; no alphabetical sorting.
+
+## Project Setup
+
+### Prerequisites
+
+- Node.js installed
+- NPM or Yarn installed
+
+### Clone Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/admin-dashboard.git
+cd admin-dashboard
+
+Install Dependencies
+Using NPM:
+npm install or npm i
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Run Project
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm run dev or yarn dev
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Open your browser and go to http://localhost:3000 to view the application.
+```
+### API ENDPOINT
+```bash
+https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json
+```
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
